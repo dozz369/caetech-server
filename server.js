@@ -25,7 +25,30 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
     console.log(`Servidor Caetech rodando em http://localhost:${port}`);
+    const express = require('express');
+const path = require('path');
+const app = express();
+const port = process.env.PORT || 3000;
+
+// Isso permite que o servidor use arquivos extras (como seu CSS)
+app.use(express.static(__dirname));
+app.use(express.json());
+
+app.get('/', (req, res) => {
+    // Verifique se o nome do arquivo no GitHub é EXATAMENTE esse:
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.post('/api/producao', (req, res) => {
+    console.log("Dados recebidos:", req.body);
+    res.status(200).json({ message: "Sucesso!" });
+});
+
+app.listen(port, () => {
+    console.log(`Caetech Corp rodando na porta ${port}`);
+});
 
 });
+
 
 
