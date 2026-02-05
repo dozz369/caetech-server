@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caetech Corp | Inteligência e Automação Industrial</title>
+    <style>
+        /* CSS Integrado para Alta Performance */
+        :root {
+            --primary: #001d3d; /* Azul Profundo (Confiança) */
+            --accent: #00edff;  /* Ciano (Tecnologia/Inovação) */
+            --text-light: #f8f9fa;
+            --text-dark: #333;
+            --bg-light: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Header */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            float: left;
+            margin: 0;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            float: right;
+            margin-top: 5px;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        nav li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 29, 61, 0.8), rgba(0, 29, 61, 0.8)), 
+                        url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #d1d1d1;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: #fff;
+        }
+
+        /* Services */
+        .services {
+            padding: 80px 0;
+            background: #f4f4f4;
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .service-item h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        /* About */
+        .about {
+            padding: 80px 0;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 80px 0;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1, nav {
+                float: none;
+                text-align: center;
+            }
+            .hero h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CAETECH <span style="color:var(--accent)">CORP</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#services">Soluções</a></li>
+                    <li><a href="#about">A Caetech</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Gestão Digital e Automação para Indústrias</h2>
+            <p>Deixe o controle manual no passado. Transformamos seu chão de fábrica em dados de lucro real.</p>
+            <a href="#services" class="btn">Ver Soluções Industriais</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Como aceleramos sua empresa:</h2>
+            <div class="grid">
+                <div class="service-item">
+                    <h3>Monitoramento IoT</h3>
+                    <p>Sensores inteligentes para contagem de produção e tempo de máquina em tempo real. Saiba exatamente o que acontece no seu galpão.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Dashboards de BI</h3>
+                    <p>Visualize sua produtividade, metas e gargalos em gráficos intuitivos direto no seu celular. Decisões baseadas em fatos.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Otimização de ERP</h3>
+                    <p>Integramos seu sistema (Bling/Tiny) para que estoque e financeiro rodem sem erros manuais ou retrabalho.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div style="max-width: 800px; margin: auto; text-align: center;">
+                <h2>Sobre a Caetech Corp</h2>
+                <p>Especializada em <strong>Gestão de TI</strong> e situada em Divinópolis-MG, a Caetech Corp une engenharia de processos com tecnologia de ponta. Nossa missão é digitalizar a indústria têxtil e comercial da região, elevando a competitividade local através da inteligência de dados.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Pronto para escalar sua produção?</h2>
+            <p>Agende um diagnóstico gratuito da sua infraestrutura tecnológica.</p>
+            <br>
+            <a href="https://wa.me/5537998268065" class="btn btn-whatsapp">Falar com Consultor via WhatsApp</a>
+            <p style="margin-top: 20px; font-size: 0.8rem;">Localizados em Divinópolis - MG</p>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 20px; font-size: 0.8rem; background: #000d1a; color: #666;">
+        &copy; 2026 Caetech Corp - Soluções e Inovações Tecnológicas.
+    </footer>
+</body>
+</html>
