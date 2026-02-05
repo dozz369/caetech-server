@@ -18,6 +18,8 @@ app.post('/api/producao', (req, res) => {
 
 // ROTA 2: Página Inicial do Site
 app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Caetechcorp.html'));
+});
     res.send('Servidor Caetech Corp Ativo e Operante.');
 });
 
@@ -25,3 +27,4 @@ app.listen(port, () => {
     console.log(`Servidor Caetech rodando em http://localhost:${port}`);
 
 });
+
