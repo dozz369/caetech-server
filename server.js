@@ -45,3 +45,12 @@ app.listen(port, () => {
     `);
 });
 
+const axios = require('axios'); // Vamos usar o axios para o "auto-ping"
+
+const URL_DO_SEU_SITE = "https://caetech-server.onrender.com"; // Substitua pela sua URL
+
+setInterval(() => {
+    axios.get(URL_DO_SEU_SITE)
+        .then(() => console.log("[YBYRA MANUTENÇÃO] Pulso enviado para manter o sistema ativo."))
+        .catch((err) => console.error("[YBYRA ERRO] Falha no pulso de atividade:", err.message));
+}, 600000); // 600.000 milissegundos = 10 minutos
